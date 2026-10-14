@@ -44,6 +44,14 @@
       <aside class="hero-note" aria-label="Professional focus">
         <p class="note-label">CURRENT FOCUS</p>
         <p>Strategy & operations<br>Financial services & fintech<br>AI and digital transformation</p>
+        <div class="decision-loop" aria-label="A practical decision-making approach">
+          <div class="decision-steps" role="group" aria-label="Explore the three steps">
+            <button class="decision-step is-active" type="button" aria-pressed="true" data-step="signal"><span class="step-number">01</span><span>Signal</span></button>
+            <button class="decision-step" type="button" aria-pressed="false" data-step="analysis"><span class="step-number">02</span><span>Analysis</span></button>
+            <button class="decision-step" type="button" aria-pressed="false" data-step="action"><span class="step-number">03</span><span>Action</span></button>
+          </div>
+          <p class="decision-description" id="decision-description" aria-live="polite">Clarify the question and find the signal in the information.</p>
+        </div>
         <div class="note-rule"></div>
         <p class="note-small">Finance-trained. Internationally minded. Curious about how useful technology gets adopted.</p>
       </aside>
@@ -70,8 +78,15 @@
           <div><p class="eyebrow section-kicker">02 / SELECTED WORK</p><h2>Useful work, made tangible.</h2></div>
           <p class="section-description">A mix of professional experience and personal prototypes. Demonstration data is fictional and clearly labelled.</p>
         </div>
+        <div class="project-filters" role="group" aria-label="Filter selected work">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All work <span>04</span></button>
+          <button class="filter-button" type="button" data-filter="strategy" aria-pressed="false">Strategy & ops</button>
+          <button class="filter-button" type="button" data-filter="finance" aria-pressed="false">Finance & ESG</button>
+          <button class="filter-button" type="button" data-filter="ai" aria-pressed="false">AI & digital</button>
+        </div>
+        <p class="filter-status visually-hidden" id="filter-status" aria-live="polite">Showing all 4 examples.</p>
         <div class="project-grid">
-          <article class="project-card project-featured">
+          <article class="project-card project-featured" data-tags="strategy finance">
             <div class="project-visual energy-visual">
               <div class="visual-topline"><span>ILLUSTRATIVE MODEL</span><span>01</span></div>
               <div class="energy-graphic" aria-hidden="true"><div class="energy-line"></div><span class="energy-point point-a"></span><span class="energy-point point-b"></span><span class="energy-point point-c"></span><span class="energy-caption">investment → operating savings</span></div>
@@ -80,7 +95,7 @@
             <div class="project-content"><p class="project-type">INTERACTIVE TOOL · FINANCIAL MODELLING</p><h3>Energy investment calculator</h3><p>A small business case tool for comparing an upfront retrofit cost with annual operating savings. Change the inputs and see the payback period, cumulative net benefit and simple return.</p><a class="project-link" href="energy-calculator.html">Open the calculator <span aria-hidden="true">↗</span></a></div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-tags="strategy ai">
             <div class="project-visual pulse-visual">
               <div class="visual-topline"><span>PRODUCT CASE STUDY</span><span>02</span></div>
               <div class="pipeline" aria-label="Prototype flow"><span>Support tickets</span><i aria-hidden="true">→</i><span>Review queue</span><i aria-hidden="true">→</i><span>Team insights</span></div>
@@ -90,7 +105,7 @@
             <div class="project-content"><p class="project-type">PERSONAL PROTOTYPE · AI OPERATIONS</p><h3>Pulse AI support insights</h3><p>A product concept for organising recurring support themes and helping teams decide what needs attention. The demo uses fictional tickets and deterministic sample labels, not a live AI model.</p><a class="project-link" href="pulse-ai.html">Explore the prototype <span aria-hidden="true">↗</span></a></div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-tags="strategy finance">
             <div class="project-visual climate-visual">
               <div class="visual-topline"><span>PROFESSIONAL EXPERIENCE</span><span>03</span></div>
               <div class="climate-orbit" aria-hidden="true"><span class="orbit-center">CAPEX<br>↔<br>IMPACT</span><i class="orbit-one">Solar PV</i><i class="orbit-two">Heat pumps</i><i class="orbit-three">Storage</i></div>
@@ -99,7 +114,7 @@
             <div class="project-content"><p class="project-type">TERRA INSTINCT · ESG & DECARBONISATION</p><h3>From climate obligations to investment choices</h3><p>Reviewed ESG, CSRD and climate-compliance obligations, assessed climate risks and modelled the financial case for solar, battery storage and heat-pump options. Client names and working materials are intentionally omitted.</p><span class="project-link project-link-static">Experience summary <span aria-hidden="true">↗</span></span></div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-tags="finance">
             <div class="project-visual audit-visual">
               <div class="visual-topline"><span>PROFESSIONAL EXPERIENCE</span><span>04</span></div>
               <div class="audit-mark" aria-hidden="true"><span>26</span><small>SUBSIDIARIES</small></div>
