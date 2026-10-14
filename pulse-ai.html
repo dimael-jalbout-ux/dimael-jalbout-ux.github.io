@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2"><meta name="description" content="A product case study prototype for reviewing fictional customer support themes with human oversight.">
+  <title>Pulse AI Support Insights | Dima Jalbout</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><script src="pulse-ai.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><a class="wordmark" href="index.html" aria-label="Dima Jalbout, home">DJ<span>.</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button><nav id="site-nav" class="site-nav" aria-label="Main navigation"><a href="index.html#about">About</a><a href="index.html#work">Selected work</a><a href="index.html#experience">Experience</a><a class="nav-contact" href="index.html#contact">Get in touch <span aria-hidden="true">↗</span></a></nav></header>
+  <main id="main">
+    <section class="subpage-hero page-width"><p class="breadcrumb"><a href="index.html">Home</a> / Selected work</p><p class="eyebrow">PERSONAL PRODUCT CASE STUDY · PROTOTYPE</p><h1>From support tickets to a clearer product signal.</h1><p>A concept for helping customer teams spot repeated friction and route uncertain cases to a person. This working page is a front-end prototype with fictional examples and fixed sample labels.</p></section>
+    <section class="tool-section page-width" aria-labelledby="prototype-title">
+      <div class="tool-shell">
+        <div class="tool-head"><div><h2 id="prototype-title">Pulse AI · support signals</h2><p>Explore a synthetic ticket set. Search and filters update locally in your browser.</p></div><span class="demo-label">NO LIVE AI</span></div>
+        <div class="top-summary" aria-label="Summary of fictional tickets"><div class="metric"><span>Fictional tickets</span><strong id="ticket-count">0</strong></div><div class="metric"><span>Needs a human check</span><strong id="review-count">0</strong></div><div class="metric"><span>Most common theme</span><strong id="common-theme">Loading</strong></div></div>
+        <div class="prototype-toolbar"><label for="theme-filter">Filter by theme</label><select id="theme-filter"><option value="all">All themes</option><option value="Reporting">Reporting</option><option value="Access">Access</option><option value="Billing">Billing</option><option value="Onboarding">Onboarding</option><option value="Integration">Integration</option></select><label class="visually-hidden" for="ticket-search">Search ticket examples</label><input id="ticket-search" type="search" placeholder="Search fictional examples" autocomplete="off"></div>
+        <p id="ticket-status" class="visually-hidden" role="status" aria-live="polite"></p>
+        <div id="ticket-list" class="ticket-list"></div>
+        <p class="assumption-note">Responsible-use notes: no personal or company data; no live model or external API; the labels below are hand-authored examples for interface testing. A production system would need privacy review, quality evaluation and a human review path for uncertain output.</p>
+      </div>
+    </section>
+    <section class="case-copy page-width"><h2>Product choices</h2><p>The core idea is not to automate a team's judgment. It is to reduce the effort needed to see recurring patterns, keep the evidence close to each suggested theme, and make uncertainty visible.</p><ul><li>One clear review queue for low-confidence or high-impact cases.</li><li>Theme and text search for quick exploration.</li><li>Human confirmation before any operational decision.</li><li>Success measures are hypotheses to test, not achieved results: adoption, classification quality, analyst usefulness and time saved.</li></ul><p>The earlier concept deck used simulated targets for evaluation. Those figures are not production results.</p></section>
+  </main>
+  <footer class="site-footer page-width"><a class="wordmark" href="index.html">DJ<span>.</span></a><p>© 2026 Dima Jalbout</p><a href="index.html#work">Back to selected work ↑</a></footer>
+</body>
+</html>
