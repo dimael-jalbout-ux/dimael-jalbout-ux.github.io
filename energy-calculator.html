@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2"><meta name="description" content="An illustrative energy retrofit investment calculator with editable assumptions and transparent outputs.">
+  <title>Energy Investment Calculator | Dima Jalbout</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><script src="energy-calculator.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><a class="wordmark" href="index.html" aria-label="Dima Jalbout, home">DJ<span>.</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button><nav id="site-nav" class="site-nav" aria-label="Main navigation"><a href="index.html#about">About</a><a href="index.html#work">Selected work</a><a href="index.html#experience">Experience</a><a class="nav-contact" href="index.html#contact">Get in touch <span aria-hidden="true">↗</span></a></nav></header>
+  <main id="main">
+    <section class="subpage-hero page-width"><p class="breadcrumb"><a href="index.html">Home</a> / Selected work</p><p class="eyebrow">INTERACTIVE MODEL · ILLUSTRATIVE ONLY</p><h1>What could an energy retrofit return?</h1><p>Adjust the assumptions to compare an initial investment with annual energy savings and maintenance costs. The model is intentionally simple so its logic is easy to inspect.</p></section>
+    <section class="tool-section page-width" aria-labelledby="model-title">
+      <div class="tool-shell">
+        <div class="tool-head"><div><h2 id="model-title">Energy investment scenario</h2><p>All amounts are illustrative. No project, client or market data is used.</p></div><span class="demo-label">SAMPLE SCENARIO</span></div>
+        <div class="calculator-layout">
+          <form id="calculator-form" class="form-grid">
+            <div class="field"><label for="investment">Initial investment (€)</label><input id="investment" name="investment" type="number" min="1" max="100000000" step="1000" value="120000" inputmode="decimal"><small>Upfront project cost before incentives.</small></div>
+            <div class="field"><label for="savings">Annual energy savings (€)</label><input id="savings" name="savings" type="number" min="0" max="100000000" step="500" value="24000" inputmode="decimal"><small>Estimated annual reduction in energy spend.</small></div>
+            <div class="field"><label for="maintenance">Annual maintenance (€)</label><input id="maintenance" name="maintenance" type="number" min="0" max="100000000" step="100" value="3000" inputmode="decimal"><small>Incremental annual operating cost.</small></div>
+            <div class="field"><label for="horizon">Evaluation period (years)</label><input id="horizon" name="horizon" type="number" min="1" max="30" step="1" value="10" inputmode="numeric"><small>Simple constant savings each year.</small></div>
+            <div class="field"><label for="discount">Discount rate (%)</label><input id="discount" name="discount" type="number" min="0" max="100" step="0.25" value="5" inputmode="decimal"><small>Used for the illustrative net present value.</small></div>
+          </form>
+          <div class="outputs" aria-live="polite" aria-atomic="true">
+            <p class="outputs-label">SCENARIO OUTPUTS</p>
+            <div class="output-main"><div class="metric"><span>Simple payback</span><strong id="payback">Loading</strong></div><div class="metric"><span>Net present value</span><strong id="npv">Loading</strong></div><div class="metric"><span>Net benefit / year</span><strong id="annual-benefit">Loading</strong></div><div class="metric"><span>Simple ROI</span><strong id="roi">Loading</strong></div></div>
+            <div class="chart-wrap"><h3>Cumulative net cash flow</h3><div id="cashflow-chart" class="chart" role="img" aria-label="Chart showing cumulative net cash flow from year zero to the end of the evaluation period"></div><div class="chart-legend"><span>Below zero: unrecovered cost</span><span>Above zero: net benefit</span></div></div>
+          </div>
+        </div>
+        <p class="assumption-note">Model limits: constant annual savings, no taxes, grants, financing, inflation, degradation, residual value, carbon pricing or changes in energy prices. This is a learning demo, not investment advice or a forecast.</p>
+      </div>
+    </section>
+    <section class="case-copy page-width"><h2>Why this model?</h2><p>Investment conversations often mix assumptions and conclusions. The tool keeps the key inputs visible, gives a quick way to explore sensitivities, and makes clear which assumptions drive the result. In professional work, I used financial models to compare decarbonisation options for commercial property clients.</p><ul><li>Transparent formulas, computed in the browser.</li><li>Accessible input labels and keyboard controls.</li><li>No data leaves this page and no information is stored.</li></ul></section>
+  </main>
+  <footer class="site-footer page-width"><a class="wordmark" href="index.html">DJ<span>.</span></a><p>© 2026 Dima Jalbout</p><a href="index.html#work">Back to selected work ↑</a></footer>
+</body>
+</html>
