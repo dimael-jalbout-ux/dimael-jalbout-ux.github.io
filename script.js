@@ -86,6 +86,7 @@
 
   motionToggle?.addEventListener('click', () => {
     userPausedMotion = !userPausedMotion;
+    interactionPausedMotion = false;
     syncLensMotion();
   });
   studio?.addEventListener('pointerenter', () => {
