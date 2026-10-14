@@ -1,35 +1,28 @@
-# Dima Jalbout | Business, Finance & Technology
+# Dima Jalbout | Strategy, Finance & Transformation
 
-Personal portfolio and lightweight interactive demos for strategy, operations, finance and technology roles.
+Personal portfolio and interactive demonstrations focused on business analysis, finance, operations and technology-enabled transformation.
 
-**Live site:** https://dimael-jalbout-ux.github.io/ (available after the repository is created and GitHub Pages is enabled)
+**Live portfolio:** https://dimael-jalbout-ux.github.io/
 
-## What is here
+## Selected work
 
-- `index.html`: portfolio, experience, education and leadership
-- `energy-calculator.html`: browser-only scenario model for simple payback, ROI and NPV
-- `pulse-ai.html`: customer support workflow prototype using fictional tickets and static labels
-- `styles.css`: responsive styles and accessible focus states
-- `robots.txt` and `sitemap.xml`: basic crawl instructions and site routes
+- `index.html`: profile, selected work, experience, education and leadership
+- `energy-calculator.html` and `energy-calculator.js`: illustrative browser-based model for simple payback, ROI and NPV
+- `pulse-ai.html` and `pulse-ai.js`: customer-support workflow prototype with fictional tickets and fixed sample labels
+- `styles.css`: responsive visual styles and visible keyboard focus states
 
-## Run locally
+## How to view
 
-Open `index.html` in a browser. The project has no build step, external library, analytics, cookie, or server requirement.
+Open `index.html` in a browser. There is no build step, external library, analytics, cookie, or server requirement.
 
-## Publish with GitHub Pages
+## Demonstration boundaries
 
-1. Create a public repository named `dimael-jalbout-ux.github.io` under the `dimael-jalbout-ux` account.
-2. Add the contents of this folder to the repository root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**, then choose `main` and `/(root)`.
-5. Wait for the Pages deployment and check the repository's **Deployments** section.
+The energy tool uses visitor-entered assumptions and intentionally omits several real-world factors. Pulse uses synthetic support examples and hand-authored labels. There is no live AI model, external API, data collection or storage. Neither demonstration represents client work, production results, or investment advice. Professional experience summaries omit confidential names and working materials.
 
-## Accuracy and privacy
+## Publishing and maintenance
 
-Portfolio copy summarizes professional experience without reproducing client or employer materials. The energy calculator uses assumptions entered by the visitor. The Pulse AI page contains fictional support examples, hand-authored sample labels and no live model. It does not send or retain data. No home address, phone number, CV, recommendation letter, client document or job-application record belongs in this public repository.
-
-The site is a personal portfolio, not investment advice. Content should be reviewed against the latest CV before it is published.
+This repository is the source for the live GitHub Pages site. Pages is configured from the `main` branch at the repository root. Edit the HTML, JavaScript and CSS directly, then verify the published site after each change.
 
 ## Licence
 
-Source code is licensed under MIT. Personal portfolio text remains © Dima Jalbout unless a file says otherwise.
+The source code is licensed under MIT. Personal portfolio text remains © Dima Jalbout.
