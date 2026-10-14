@@ -1848,3 +1848,123 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible {
   opacity:1;
   transform:none
 }
+
+
+/* A little more life in the studio: steady, low-amplitude motion. */
+.hero-lab {
+  isolation:isolate;
+  background:
+    radial-gradient(ellipse at var(--spot-x,85%) var(--spot-y,4%),#52745d 0,transparent 43%),
+    linear-gradient(150deg,#1e382e,#142720 74%);
+  transition:background-position .35s ease,box-shadow .35s ease
+}
+.hero-lab::before { animation:orbit-drift 19s ease-in-out infinite alternate }
+.hero-lab::after { animation:orbit-drift 14s ease-in-out infinite alternate-reverse }
+@keyframes orbit-drift {
+  from { transform:translate3d(0,0,0) rotate(0deg) }
+  to { transform:translate3d(-18px,-12px,0) rotate(8deg) }
+}
+.lens-motion-row {
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  min-height:25px;
+  margin-top:5px;
+  color:#aebfb2;
+  font-size:7px;
+  font-weight:bold;
+  letter-spacing:.9px
+}
+.motion-toggle {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:5px 8px;
+  border:1px solid #ffffff30;
+  border-radius:999px;
+  background:#ffffff0a;
+  color:#f3e8d6;
+  font:inherit;
+  letter-spacing:.3px;
+  cursor:pointer;
+  transition:background .2s ease,border-color .2s ease,transform .2s ease
+}
+.motion-toggle:hover { background:#ffffff18;border-color:#ffffff60;transform:translateY(-1px) }
+.motion-toggle:focus-visible { outline:2px solid #f2d3ad;outline-offset:3px }
+.motion-toggle [data-motion-icon] { color:#e7b989;font-size:8px }
+.lens-progress {
+  position:relative;
+  z-index:1;
+  height:2px;
+  overflow:hidden;
+  background:#ffffff17
+}
+.lens-progress span {
+  display:block;
+  width:100%;
+  height:100%;
+  background:linear-gradient(90deg,#d9a779,#a5c39d);
+  transform:scaleX(0);
+  transform-origin:left
+}
+.lens-progress span.is-running { animation:studio-progress 8s linear forwards }
+@keyframes studio-progress { to { transform:scaleX(1) } }
+.signal-orbit { transform-box:fill-box;transform-origin:center;animation:orbit-pulse 3.2s ease-in-out infinite }
+.orbit-b { animation-delay:.55s }
+.orbit-c { animation-delay:1.1s }
+@keyframes orbit-pulse {
+  0%,100% { opacity:.45;transform:scale(.88) }
+  50% { opacity:1;transform:scale(1.1) }
+}
+.signal-node { animation:signal-glow 2.8s ease-in-out infinite }
+.signal-node:nth-of-type(2) { animation-delay:.45s }
+.signal-node:nth-of-type(3) { animation-delay:.9s }
+.signal-node:nth-of-type(4) { animation-delay:1.35s }
+@keyframes signal-glow {
+  0%,100% { filter:drop-shadow(0 0 3px #e2ad7c55) }
+  50% { filter:drop-shadow(0 0 10px #e2ad7cdd) }
+}
+.chart-dot { animation:chart-beat 2.1s ease-in-out infinite }
+@keyframes chart-beat {
+  0%,100% { opacity:.75;filter:drop-shadow(0 0 0 #f5d9ac00) }
+  50% { opacity:1;filter:drop-shadow(0 0 8px #f5d9acaa) }
+}
+.ai-flow span { animation:flow-arrive 4.5s ease-in-out infinite }
+.ai-flow span:nth-of-type(2) { animation-delay:.45s }
+.ai-flow span:nth-of-type(3) { animation-delay:.9s }
+@keyframes flow-arrive {
+  0%,10%,100% { border-color:#ffffff20;background:transparent;transform:translateY(0) }
+  25%,45% { border-color:#e2ad7c99;background:#d9a77912;transform:translateY(-3px) }
+}
+.review-indicator { animation:review-pulse 1.8s ease-in-out infinite }
+@keyframes review-pulse {
+  0%,100% { box-shadow:0 0 0 3px #d9a77916 }
+  50% { box-shadow:0 0 0 7px #d9a77908,0 0 14px #d9a77966 }
+}
+.project-card .project-visual { transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .4s ease }
+.project-card:hover .project-visual { transform:scale(1.025);filter:saturate(1.12) }
+.energy-line { animation:energy-flow 3.8s ease-in-out infinite }
+@keyframes energy-flow {
+  0%,100% { background-position:0 0;filter:drop-shadow(0 0 0 #d9a77900) }
+  50% { background-position:100% 0;filter:drop-shadow(0 0 7px #d9a779aa) }
+}
+.energy-point { animation:point-beat 2.8s ease-in-out infinite }
+.point-b { animation-delay:.5s }
+.point-c { animation-delay:1s }
+@keyframes point-beat {
+  0%,100% { transform:scale(.88);opacity:.65 }
+  50% { transform:scale(1.18);opacity:1 }
+}
+@media(max-width:580px) {
+  .lens-motion-row { margin-top:3px }
+  .motion-toggle { padding:5px 7px }
+}
+@media(prefers-reduced-motion:reduce) {
+  .hero-lab::before,.hero-lab::after,.signal-orbit,.signal-node,.chart-dot,.ai-flow span,.review-indicator,
+  .energy-line,.energy-point,.project-card .project-visual,.lens-progress span,.motion-toggle {
+    animation:none!important;
+    transition:none!important
+  }
+}
