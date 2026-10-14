@@ -35,15 +35,83 @@
     if (moveFocus) tab.focus();
   }
   lensTabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => activateLens(tab));
+    tab.addEventListener('click', () => { pauseForManualChoice(); activateLens(tab); });
     tab.addEventListener('keydown', (event) => {
       if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
       event.preventDefault();
       const next = event.key === 'Home' ? 0 : event.key === 'End' ? lensTabs.length - 1
         : (index + (event.key === 'ArrowRight' ? 1 : lensTabs.length - 1)) % lensTabs.length;
+      pauseForManualChoice();
       activateLens(lensTabs[next], true);
     });
   });
+
+  const motionToggle = document.querySelector('[data-lens-toggle]');
+  const motionLabel = document.querySelector('[data-motion-label]');
+  const motionIcon = document.querySelector('[data-motion-icon]');
+  const motionStatus = document.querySelector('[data-motion-status]');
+  const motionProgress = document.querySelector('[data-lens-progress]');
+  const studio = document.querySelector('.hero-lab');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let motionTimer = 0;
+  let userPausedMotion = prefersReducedMotion.matches;
+  let interactionPausedMotion = false;
+
+  function syncLensMotion() {
+    window.clearTimeout(motionTimer);
+    const running = !userPausedMotion && !interactionPausedMotion && !document.hidden && !prefersReducedMotion.matches && lensTabs.length > 1;
+    motionToggle?.classList.toggle('is-playing', running);
+    if (motionToggle) {
+      motionToggle.setAttribute('aria-label', running ? 'Pause automatic rotation' : 'Start automatic rotation');
+      motionToggle.setAttribute('aria-pressed', String(running));
+    }
+    if (motionLabel) motionLabel.textContent = running ? 'Pause' : 'Play';
+    if (motionIcon) motionIcon.textContent = running ? 'Ⅱ' : '▶';
+    if (motionStatus) motionStatus.textContent = prefersReducedMotion.matches
+      ? 'MOTION REDUCED'
+      : (running ? 'AUTO ROTATION · 8 SEC' : (userPausedMotion ? 'ROTATION PAUSED' : 'PAUSED WHILE EXPLORING'));
+    motionProgress?.classList.toggle('is-running', running);
+    if (!running) return;
+    motionTimer = window.setTimeout(() => {
+      const activeIndex = lensTabs.findIndex((item) => item.getAttribute('aria-selected') === 'true');
+      activateLens(lensTabs[(activeIndex + 1) % lensTabs.length]);
+      syncLensMotion();
+    }, 8000);
+  }
+
+  function pauseForManualChoice() {
+    userPausedMotion = true;
+    syncLensMotion();
+  }
+
+  motionToggle?.addEventListener('click', () => {
+    userPausedMotion = !userPausedMotion;
+    syncLensMotion();
+  });
+  studio?.addEventListener('pointerenter', () => {
+    interactionPausedMotion = true;
+    syncLensMotion();
+  });
+  studio?.addEventListener('pointerleave', () => {
+    interactionPausedMotion = false;
+    syncLensMotion();
+  });
+  studio?.addEventListener('focusin', () => {
+    interactionPausedMotion = true;
+    syncLensMotion();
+  });
+  studio?.addEventListener('focusout', (event) => {
+    if (!studio.contains(event.relatedTarget)) {
+      interactionPausedMotion = false;
+      syncLensMotion();
+    }
+  });
+  document.addEventListener('visibilitychange', syncLensMotion);
+  prefersReducedMotion.addEventListener?.('change', () => {
+    if (prefersReducedMotion.matches) userPausedMotion = true;
+    syncLensMotion();
+  });
+  syncLensMotion();
 
   const filters = [...document.querySelectorAll('.filter-button')];
   const cards = [...document.querySelectorAll('.project-card[data-tags]')];
