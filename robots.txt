@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dimael-jalbout-ux.github.io/sitemap.xml
