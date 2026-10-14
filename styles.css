@@ -1188,3 +1188,126 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible {
     animation:none!important
   }
 }
+
+/* Interactive portfolio controls */
+.decision-loop {
+  margin-top:22px;
+  max-width:350px
+}
+.decision-steps {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  position:relative;
+  gap:8px
+}
+.decision-steps::before {
+  content:"";
+  position:absolute;
+  height:1px;
+  background:#c9ccc2;
+  left:17%;
+  right:17%;
+  top:13px
+}
+.decision-step {
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  gap:7px;
+  border:0;
+  background:transparent;
+  color:#68736c;
+  font:11px var(--sans);
+  cursor:pointer;
+  padding:0 4px 5px
+}
+.step-number {
+  display:grid;
+  place-items:center;
+  width:27px;
+  height:27px;
+  border:1px solid #c9ccc2;
+  border-radius:50%;
+  background:var(--paper);
+  color:#68736c;
+  font-size:9px;
+  transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease
+}
+.decision-step:hover .step-number {
+  transform:translateY(-2px)
+}
+.decision-step.is-active {
+  color:var(--green-dark);
+  font-weight:bold
+}
+.decision-step.is-active .step-number {
+  background:var(--green-dark);
+  border-color:var(--green-dark);
+  color:white
+}
+.decision-step:focus-visible,.filter-button:focus-visible {
+  outline:2px solid var(--clay);
+  outline-offset:3px
+}
+.decision-description {
+  min-height:38px;
+  margin:14px 0 0;
+  color:var(--muted);
+  font:12px/1.6 var(--sans)
+}
+.project-filters {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  margin:-14px 0 22px
+}
+.filter-button {
+  border:1px solid #d5d5ce;
+  border-radius:999px;
+  background:transparent;
+  color:#59645d;
+  padding:9px 13px;
+  font:11px var(--sans);
+  cursor:pointer;
+  transition:background .18s ease,border-color .18s ease,color .18s ease,transform .18s ease
+}
+.filter-button:hover {
+  border-color:var(--green);
+  transform:translateY(-1px)
+}
+.filter-button.is-active {
+  background:var(--green-dark);
+  border-color:var(--green-dark);
+  color:white
+}
+.filter-button span {
+  margin-left:5px;
+  opacity:.72;
+  font-size:9px
+}
+.project-card {
+  transition:transform .2s ease,box-shadow .2s ease
+}
+.project-card:hover {
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px #27382b12
+}
+.project-card[hidden] {
+  display:none
+}
+@media(max-width:580px) {
+  .decision-loop {
+    max-width:100%
+  }
+  .project-filters {
+    gap:7px;
+    margin:-8px 0 18px
+  }
+  .filter-button {
+    padding:8px 10px;
+    font-size:10px
+  }
+}
