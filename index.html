@@ -13,8 +13,8 @@
   <title>Dima Jalbout | Strategy, Finance & Transformation</title>
   <link rel="canonical" href="https://dimael-jalbout-ux.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=advanced-20261015">
-  <script src="script.js?v=advanced-20261015" defer></script>
+  <link rel="stylesheet" href="styles.css?v=motion-20261015">
+  <script src="script.js?v=motion-20261015" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -55,6 +55,11 @@
           <button class="lens-tab" id="lens-tab-finance" type="button" role="tab" aria-selected="false" aria-controls="lens-panel-finance" tabindex="-1" data-lens="finance">Finance</button>
           <button class="lens-tab" id="lens-tab-ai" type="button" role="tab" aria-selected="false" aria-controls="lens-panel-ai" tabindex="-1" data-lens="ai">AI & digital</button>
         </div>
+        <div class="lens-motion-row">
+          <span class="motion-status" data-motion-status aria-live="polite">AUTO ROTATION · 8 SEC</span>
+          <button class="motion-toggle" type="button" data-lens-toggle aria-label="Pause automatic rotation"><span aria-hidden="true" data-motion-icon>Ⅱ</span><span data-motion-label>Pause</span></button>
+        </div>
+        <div class="lens-progress" aria-hidden="true"><span data-lens-progress></span></div>
 
         <section class="lens-panel is-active" id="lens-panel-strategy" role="tabpanel" aria-labelledby="lens-tab-strategy" tabindex="0" data-lens-panel="strategy">
           <div class="lens-panel-heading"><div><p>STRATEGY & OPERATIONS</p><h2>Make the messy clear.</h2></div><span class="panel-index">A / C</span></div>
