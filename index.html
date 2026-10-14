@@ -13,8 +13,8 @@
   <title>Dima Jalbout | Strategy, Finance & Transformation</title>
   <link rel="canonical" href="https://dimael-jalbout-ux.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=interactive-20261014">
-  <script src="script.js?v=interactive-20261014" defer></script>
+  <link rel="stylesheet" href="styles.css?v=advanced-20261015">
+  <script src="script.js?v=advanced-20261015" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -40,20 +40,63 @@
           <a class="button button-dark" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
           <a class="text-link" href="https://www.linkedin.com/in/dima-jalbout/" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
-      </div>
-      <aside class="hero-note" aria-label="Professional focus">
-        <p class="note-label">CURRENT FOCUS</p>
-        <p>Strategy & operations<br>Financial services & fintech<br>AI and digital transformation</p>
-        <div class="decision-loop" aria-label="A practical decision-making approach">
-          <div class="decision-steps" role="group" aria-label="Explore the three steps">
-            <button class="decision-step is-active" type="button" aria-pressed="true" data-step="signal"><span class="step-number">01</span><span>Signal</span></button>
-            <button class="decision-step" type="button" aria-pressed="false" data-step="analysis"><span class="step-number">02</span><span>Analysis</span></button>
-            <button class="decision-step" type="button" aria-pressed="false" data-step="action"><span class="step-number">03</span><span>Action</span></button>
-          </div>
-          <p class="decision-description" id="decision-description" aria-live="polite">Clarify the question and find the signal in the information.</p>
+        <div class="hero-proof" aria-label="Profile highlights">
+          <div><strong>4</strong><span>languages</span></div>
+          <div><strong>26</strong><span>group entities reviewed</span></div>
+          <div><strong>3</strong><span>continents</span></div>
         </div>
-        <div class="note-rule"></div>
-        <p class="note-small">Finance-trained. Internationally minded. Curious about how useful technology gets adopted.</p>
+      </div>
+
+      <aside class="hero-lab" aria-label="Interactive professional focus explorer">
+        <div class="lab-topline"><span>DECISION STUDIO <i> / </i> 01</span><span class="lab-status"><b></b> INTERACTIVE</span></div>
+        <p class="lab-prompt">Choose a lens to explore my work</p>
+        <div class="lens-tabs" role="tablist" aria-label="Professional focus">
+          <button class="lens-tab is-active" id="lens-tab-strategy" type="button" role="tab" aria-selected="true" aria-controls="lens-panel-strategy" tabindex="0" data-lens="strategy">Strategy & ops</button>
+          <button class="lens-tab" id="lens-tab-finance" type="button" role="tab" aria-selected="false" aria-controls="lens-panel-finance" tabindex="-1" data-lens="finance">Finance</button>
+          <button class="lens-tab" id="lens-tab-ai" type="button" role="tab" aria-selected="false" aria-controls="lens-panel-ai" tabindex="-1" data-lens="ai">AI & digital</button>
+        </div>
+
+        <section class="lens-panel is-active" id="lens-panel-strategy" role="tabpanel" aria-labelledby="lens-tab-strategy" tabindex="0" data-lens-panel="strategy">
+          <div class="lens-panel-heading"><div><p>STRATEGY & OPERATIONS</p><h2>Make the messy clear.</h2></div><span class="panel-index">A / C</span></div>
+          <p class="lens-summary">Connect a complex question to useful evidence, then to a next step.</p>
+          <svg class="signal-map" viewBox="0 0 520 190" role="img" aria-label="A three-step map from business question to evidence to decision">
+            <defs><linearGradient id="signal-stroke" x1="0" x2="1"><stop offset="0" stop-color="#d9a779"/><stop offset="1" stop-color="#89ad91"/></linearGradient></defs>
+            <path class="signal-path" d="M62 104 C128 104 139 58 205 58 S285 142 350 142 S413 91 458 91" fill="none" stroke="url(#signal-stroke)" stroke-width="2"/>
+            <circle class="signal-orbit orbit-a" cx="62" cy="104" r="25"/><circle class="signal-orbit orbit-b" cx="205" cy="58" r="25"/><circle class="signal-orbit orbit-c" cx="350" cy="142" r="25"/>
+            <circle class="signal-node" cx="62" cy="104" r="7"/><circle class="signal-node" cx="205" cy="58" r="7"/><circle class="signal-node" cx="350" cy="142" r="7"/><circle class="signal-node signal-node-final" cx="458" cy="91" r="7"/>
+            <text x="62" y="151" text-anchor="middle">QUESTION</text><text x="205" y="20" text-anchor="middle">EVIDENCE</text><text x="350" y="184" text-anchor="middle">TRADE-OFFS</text><text x="458" y="63" text-anchor="middle">ACTION</text>
+          </svg>
+          <div class="lab-foot"><span><strong>26</strong> subsidiaries</span><span><strong>3</strong> continents</span><span>group audit case</span></div>
+        </section>
+
+        <section class="lens-panel" id="lens-panel-finance" role="tabpanel" aria-labelledby="lens-tab-finance" tabindex="0" data-lens-panel="finance" hidden>
+          <div class="lens-panel-heading"><div><p>FINANCE & INVESTMENT</p><h2>Make assumptions visible.</h2></div><span class="panel-index">B / C</span></div>
+          <p class="lens-summary">Explore the relationship between upfront cost, operating savings and time.</p>
+          <div class="finance-preview" role="img" aria-label="Illustrative chart showing cumulative cash flow changing over time">
+            <div class="chart-labels"><span>NET CASH FLOW</span><span>ILLUSTRATIVE</span></div>
+            <svg viewBox="0 0 520 170" preserveAspectRatio="none" aria-hidden="true">
+              <path class="chart-gridline" d="M24 28H500M24 78H500M24 128H500"/>
+              <path class="finance-area" d="M24 145 C100 140 132 130 185 111 S273 86 319 68 S408 46 500 23 L500 145Z"/>
+              <path class="finance-line" d="M24 145 C100 140 132 130 185 111 S273 86 319 68 S408 46 500 23"/>
+              <circle class="chart-dot" cx="319" cy="68" r="5"/>
+            </svg>
+            <div class="chart-years"><span>Initial investment</span><span>Operating years</span><span>Net benefit</span></div>
+          </div>
+          <a class="panel-link" href="energy-calculator.html">Adjust an illustrative scenario <span aria-hidden="true">↗</span></a>
+        </section>
+
+        <section class="lens-panel" id="lens-panel-ai" role="tabpanel" aria-labelledby="lens-tab-ai" tabindex="0" data-lens-panel="ai" hidden>
+          <div class="lens-panel-heading"><div><p>AI & DIGITAL TRANSFORMATION</p><h2>Keep people in the loop.</h2></div><span class="panel-index">C / C</span></div>
+          <p class="lens-summary">Surface recurring issues, keep evidence close and route uncertainty to a person.</p>
+          <div class="ai-preview" aria-label="Synthetic support-ticket workflow">
+            <div class="ai-count"><strong>12</strong><span>fictional tickets</span></div>
+            <div class="ai-flow"><span>Customer signal</span><b aria-hidden="true">→</b><span>Theme cluster</span><b aria-hidden="true">→</b><span>Team review</span></div>
+            <div class="review-queue"><span class="review-indicator"></span><span><strong>3 cases</strong> below the confidence threshold</span><em>Human review</em></div>
+          </div>
+          <a class="panel-link" href="pulse-ai.html">Explore the support prototype <span aria-hidden="true">↗</span></a>
+        </section>
+
+        <div class="lab-bottom"><span>FINANCE · OPERATIONS · TECHNOLOGY</span><span>PARIS <b>↗</b></span></div>
       </aside>
       <div class="hero-index" aria-hidden="true">01 / 04</div>
     </section>
@@ -92,7 +135,7 @@
               <div class="energy-graphic" aria-hidden="true"><div class="energy-line"></div><span class="energy-point point-a"></span><span class="energy-point point-b"></span><span class="energy-point point-c"></span><span class="energy-caption">investment → operating savings</span></div>
               <div class="visual-metrics"><div><strong>ROI</strong><span>scenario-led</span></div><div><strong>Payback</strong><span>transparent inputs</span></div><div><strong>NPV</strong><span>decision support</span></div></div>
             </div>
-            <div class="project-content"><p class="project-type">INTERACTIVE TOOL · FINANCIAL MODELLING</p><h3>Energy investment calculator</h3><p>A small business case tool for comparing an upfront retrofit cost with annual operating savings. Change the inputs and see the payback period, cumulative net benefit and simple return.</p><a class="project-link" href="energy-calculator.html">Open the calculator <span aria-hidden="true">↗</span></a></div>
+            <div class="project-content"><p class="project-type">INTERACTIVE TOOL · FINANCIAL MODELLING</p><h3>Energy investment calculator</h3><p>A small business case tool for comparing an upfront retrofit cost with annual operating savings. Change the inputs and see the payback period, cumulative net benefit and simple return.</p><div class="project-actions"><a class="project-link" href="energy-calculator.html">Open the calculator <span aria-hidden="true">↗</span></a><button class="case-button" type="button" data-case="energy">View case note <span aria-hidden="true">＋</span></button></div></div>
           </article>
 
           <article class="project-card" data-tags="strategy ai">
@@ -102,7 +145,7 @@
               <div class="pulse-callout"><span class="pulse-dot"></span> Low confidence → human review</div>
               <div class="pulse-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
             </div>
-            <div class="project-content"><p class="project-type">PERSONAL PROTOTYPE · AI OPERATIONS</p><h3>Pulse AI support insights</h3><p>A product concept for organising recurring support themes and helping teams decide what needs attention. The demo uses fictional tickets and deterministic sample labels, not a live AI model.</p><a class="project-link" href="pulse-ai.html">Explore the prototype <span aria-hidden="true">↗</span></a></div>
+            <div class="project-content"><p class="project-type">PERSONAL PROTOTYPE · AI OPERATIONS</p><h3>Pulse AI support insights</h3><p>A product concept for organising recurring support themes and helping teams decide what needs attention. The demo uses fictional tickets and deterministic sample labels, not a live AI model.</p><div class="project-actions"><a class="project-link" href="pulse-ai.html">Explore the prototype <span aria-hidden="true">↗</span></a><button class="case-button" type="button" data-case="pulse">View case note <span aria-hidden="true">＋</span></button></div></div>
           </article>
 
           <article class="project-card" data-tags="strategy finance">
@@ -111,7 +154,7 @@
               <div class="climate-orbit" aria-hidden="true"><span class="orbit-center">CAPEX<br>↔<br>IMPACT</span><i class="orbit-one">Solar PV</i><i class="orbit-two">Heat pumps</i><i class="orbit-three">Storage</i></div>
               <p class="climate-foot">Commercial property · London</p>
             </div>
-            <div class="project-content"><p class="project-type">TERRA INSTINCT · ESG & DECARBONISATION</p><h3>From climate obligations to investment choices</h3><p>Reviewed ESG, CSRD and climate-compliance obligations, assessed climate risks and modelled the financial case for solar, battery storage and heat-pump options. Client names and working materials are intentionally omitted.</p><span class="project-link project-link-static">Experience summary <span aria-hidden="true">↗</span></span></div>
+            <div class="project-content"><p class="project-type">TERRA INSTINCT · ESG & DECARBONISATION</p><h3>From climate obligations to investment choices</h3><p>Reviewed ESG, CSRD and climate-compliance obligations, assessed climate risks and modelled the financial case for solar, battery storage and heat-pump options. Client names and working materials are intentionally omitted.</p><button class="case-button" type="button" data-case="terra">View case note <span aria-hidden="true">＋</span></button></div>
           </article>
 
           <article class="project-card" data-tags="finance">
@@ -120,7 +163,7 @@
               <div class="audit-mark" aria-hidden="true"><span>26</span><small>SUBSIDIARIES</small></div>
               <div class="audit-meta"><span>IAS 36</span><span>3 continents</span><span>Group audit</span></div>
             </div>
-            <div class="project-content"><p class="project-type">KPMG · GROUP AUDIT</p><h3>Making a complex group review traceable</h3><p>Supported impairment testing for investments in 26 subsidiaries across three continents, including discounted cash-flow analysis and coordination with legal teams. Confidential company information is not included.</p><span class="project-link project-link-static">Experience summary <span aria-hidden="true">↗</span></span></div>
+            <div class="project-content"><p class="project-type">KPMG · GROUP AUDIT</p><h3>Making a complex group review traceable</h3><p>Supported impairment testing for investments in 26 subsidiaries across three continents, including discounted cash-flow analysis and coordination with legal teams. Confidential company information is not included.</p><button class="case-button" type="button" data-case="kpmg">View case note <span aria-hidden="true">＋</span></button></div>
           </article>
         </div>
         <p class="project-note">Prototypes are for demonstration and learning. Illustrative assumptions are not investment advice or reported client results.</p>
@@ -163,6 +206,10 @@
     </section>
   </main>
 
+    <dialog class="case-dialog" id="case-dialog" aria-labelledby="case-dialog-title">
+      <div class="dialog-top"><p class="eyebrow">CASE NOTE · SELECTED WORK</p><button class="dialog-close" type="button" aria-label="Close case note">×</button></div>
+      <div id="case-dialog-content"></div>
+    </dialog>
   <footer class="site-footer page-width"><a class="wordmark" href="#top">DJ<span>.</span></a><p>© <span id="year">2026</span> Dima Jalbout</p><a href="#top">Back to top ↑</a></footer>
 </body>
 </html>
