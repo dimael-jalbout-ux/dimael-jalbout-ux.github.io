@@ -3448,3 +3448,20 @@ body { background:var(--paper);color:var(--ink) }
   .pulse-bars-row { grid-template-columns:105px 1fr 23px; gap:6px }
   .ai-preview { margin-top:15px }
 }
+
+/* Final readability and disclosure-state fixes for the signal desk */
+.case-details[hidden] { display:none!important }
+.console-help,.pattern-callout p,.threshold-key p { font-size:10px }
+.console-metrics article>span { font-size:9px }
+.theme-row-head { font-size:11px }
+.queue-status { font-size:10px }
+.case-trigger-main>strong { font-size:16px }
+.case-excerpt { font-size:10px }
+.case-trigger-side { flex-basis:135px }
+.case-state { font-size:8px }
+.case-score { font-size:8px }
+.case-open-label { font-size:9px }
+.case-details p { font-size:10px }
+.case-detail-footer { font-size:9px }
+.console-footnote p { font-size:9px }
+.console-footnote>span { font-size:8px }
