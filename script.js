@@ -161,14 +161,14 @@
       note: 'Illustrative inputs only. Not investment advice or a reported client result.'
     },
     pulse: {
-      eyebrow: 'AI OPERATIONS · PERSONAL PROTOTYPE',
-      title: 'Pulse AI support insights',
+      eyebrow: 'AI STRATEGY · PERSONAL CONCEPT',
+      title: 'AI opportunity portfolio',
       facts: [
-        ['Question', 'How might a customer team spot repeated friction without losing sight of uncertain cases?'],
-        ['Approach', 'Explore a fictional support signal desk: compare five themes, inspect case evidence and simulate human review. Labels and scores are fixed examples, not live AI outputs.'],
-        ['What it demonstrates', 'A human-in-the-loop product concept. Labels are deterministic samples, not outputs from a live AI model.']
+        ['Question', 'How might an operations team compare AI workflow ideas before committing to a pilot?'],
+        ['Approach', 'A transparent decision canvas that weighs operational value, readiness, manageable risk and ease to test across fictional use cases.'],
+        ['What it demonstrates', 'Structured prioritisation, visible assumptions, human oversight and test-first thinking. All ratings are illustrative.']
       ],
-      note: 'Synthetic support examples only. No customer data is used.'
+      note: 'Self-directed concept work. No client implementation, live model or company data is represented.'
     },
     terra: {
       eyebrow: 'ESG & TRANSFORMATION · PROFESSIONAL EXPERIENCE',
