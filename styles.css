@@ -2776,3 +2776,11 @@ body { background:var(--paper);color:var(--ink) }
 @media(prefers-reduced-motion:reduce) {
   *,*::before,*::after { scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important }
 }
+
+
+/* Keep featured case-study copy readable on its light editorial surface. */
+.project-featured .project-content h3 { color:#162b35 }
+.project-featured .project-type { color:#176c68 }
+.project-featured .project-content>p:not(.project-type) { color:#5a6b6c }
+.project-featured .project-link,.project-featured .case-button { color:#142f39 }
+.project-featured .project-link span,.project-featured .case-button span { color:#e2674d }
