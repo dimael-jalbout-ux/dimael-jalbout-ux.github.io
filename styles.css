@@ -3229,3 +3229,14 @@ body { background:var(--paper);color:var(--ink) }
   }
   .project-card.is-filter-entering { animation:none!important }
 }
+
+
+/* Let the section colours meet gradually instead of changing on a hard edge. */
+.section-pad:not(.contact)::before {
+  height:clamp(112px,13vw,160px);
+}
+#about { --section-entry-color:#f7f6f2 }
+#work { --section-entry-color:#fffdf6 }
+#experience { --section-entry-color:#ecebe3 }
+#education { --section-entry-color:#f1f1e9 }
+.contact.section-pad::before { height:96px }
