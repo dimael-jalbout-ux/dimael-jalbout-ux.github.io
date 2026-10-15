@@ -117,7 +117,8 @@
   const filters = [...document.querySelectorAll('.filter-button')];
   const cards = [...document.querySelectorAll('.project-card[data-tags]')];
   const filterStatus = document.querySelector('#filter-status');
-  const filterLabels = {strategy:'strategy and operations',finance:'finance and ESG',ai:'AI and digital'};
+  const projectGrid = document.querySelector('.project-grid');
+  const filterLabels = {strategy:'strategy and transformation',finance:'finance and audit',ai:'AI and operations'};
   filters.forEach((button) => {
     button.addEventListener('click', () => {
       const filter = button.dataset.filter;
@@ -126,11 +127,20 @@
         item.classList.toggle('is-active', active);
         item.setAttribute('aria-pressed', String(active));
       });
+      projectGrid?.setAttribute('data-filter', filter);
       let visible = 0;
       cards.forEach((card) => {
-        const show = filter === 'all' || card.dataset.tags.split(/\s+/).includes(filter);
+        const wasHidden = card.hidden;
+        const show = filter === 'all' || card.dataset.tags.split(/\\s+/).includes(filter);
+        card.classList.toggle('is-filter-spotlight', show && filter === 'ai');
+        card.classList.remove('is-filter-entering');
         card.hidden = !show;
-        if (show) visible += 1;
+        if (show) {
+          visible += 1;
+          if (wasHidden && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            requestAnimationFrame(() => card.classList.add('is-filter-entering'));
+          }
+        }
       });
       if (filterStatus) filterStatus.textContent = filter === 'all'
         ? `Showing all ${visible} examples.`
