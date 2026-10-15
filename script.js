@@ -165,7 +165,7 @@
       title: 'Pulse AI support insights',
       facts: [
         ['Question', 'How might a customer team spot repeated friction without losing sight of uncertain cases?'],
-        ['Approach', 'Explore 12 fictional tickets by theme or search. Low-confidence examples are visibly routed for human review.'],
+        ['Approach', 'Explore a fictional support signal desk: compare five themes, inspect case evidence and simulate human review. Labels and scores are fixed examples, not live AI outputs.'],
         ['What it demonstrates', 'A human-in-the-loop product concept. Labels are deterministic samples, not outputs from a live AI model.']
       ],
       note: 'Synthetic support examples only. No customer data is used.'
