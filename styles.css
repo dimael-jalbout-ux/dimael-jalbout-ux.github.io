@@ -2525,7 +2525,7 @@ body { background:var(--paper);color:var(--ink) }
 .hero .eyebrow { color:#d2d9d2;letter-spacing:1.9px }
 .status-dot { background:#efc456;box-shadow:0 0 0 5px #efc45620 }
 .hero h1 {
-  max-width:680px;font:clamp(66px,7.7vw,104px)/.92 var(--serif);
+  max-width:680px;font:clamp(62px,6.1vw,82px)/.95 var(--serif);
   letter-spacing:-.065em;color:#fffdf6;text-wrap:balance
 }
 .hero h1 span { color:#efc456 }
