@@ -3141,3 +3141,11 @@ body { background:var(--paper);color:var(--ink) }
     transform:none!important;
   }
 }
+
+/* Keep the connector behind, never on top of, the story labels. */
+.decision-route li>span:last-child {
+  position:relative;
+  z-index:2;
+  padding-inline:7px;
+  background:linear-gradient(180deg,#f3f2e9,#faf8f0);
+}
