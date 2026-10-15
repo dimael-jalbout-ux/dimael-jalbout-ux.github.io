@@ -3244,3 +3244,11 @@ body { background:var(--paper);color:var(--ink) }
 
 /* Hidden project cards must stay hidden despite per-card display layouts. */
 .project-grid>.project-card[hidden] { display:none!important }
+
+
+/* Keep the experience backdrop calm behind its timeline. */
+.experience {
+  background:
+    radial-gradient(ellipse at 86% 18%,#dce7df99 0,transparent 34rem),
+    linear-gradient(115deg,#fffdf7 0%,#f1f1e9 100%);
+}
