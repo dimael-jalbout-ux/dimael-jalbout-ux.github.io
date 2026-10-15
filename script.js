@@ -128,11 +128,12 @@
         item.setAttribute('aria-pressed', String(active));
       });
       projectGrid?.setAttribute('data-filter', filter);
+      const matchingCount = cards.filter((card) => filter === 'all' || card.dataset.tags.split(/\\s+/).includes(filter)).length;
       let visible = 0;
       cards.forEach((card) => {
         const wasHidden = card.hidden;
         const show = filter === 'all' || card.dataset.tags.split(/\\s+/).includes(filter);
-        card.classList.toggle('is-filter-spotlight', show && filter === 'ai');
+        card.classList.toggle('is-filter-spotlight', show && matchingCount === 1);
         card.classList.remove('is-filter-entering');
         card.hidden = !show;
         if (show) {
