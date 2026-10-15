@@ -222,6 +222,7 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if ('IntersectionObserver' in window && !reduceMotion) {
     document.body.classList.add('has-reveal');
+    const revealItems = [...document.querySelectorAll('.project-card, .timeline-item, .education-list article')];
     const observer = new IntersectionObserver((entries, currentObserver) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -230,9 +231,21 @@
         }
       });
     }, {threshold: 0.12});
-    document.querySelectorAll('.project-card, .timeline-item, .education-list article').forEach((item) => {
+    revealItems.forEach((item) => {
       item.classList.add('reveal-item');
       observer.observe(item);
     });
+    const revealPassedItems = () => {
+      const cutoff = window.innerHeight + 180;
+      revealItems.forEach((item) => {
+        if (!item.classList.contains('is-visible') && item.getBoundingClientRect().top < cutoff) {
+          item.classList.add('is-visible');
+          observer.unobserve(item);
+        }
+      });
+    };
+    window.addEventListener('scroll', revealPassedItems, {passive:true});
+    window.addEventListener('resize', revealPassedItems);
+    revealPassedItems();
   }
 })();
