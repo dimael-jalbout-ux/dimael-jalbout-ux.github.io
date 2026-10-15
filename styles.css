@@ -3240,3 +3240,7 @@ body { background:var(--paper);color:var(--ink) }
 #experience { --section-entry-color:#ecebe3 }
 #education { --section-entry-color:#f1f1e9 }
 .contact.section-pad::before { height:96px }
+
+
+/* Hidden project cards must stay hidden despite per-card display layouts. */
+.project-grid>.project-card[hidden] { display:none!important }
